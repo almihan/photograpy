@@ -2,10 +2,9 @@
 
 ### Build and Deployment
 
-The project is built using :boom:**parcel** :boom:
 
 The project is deployed at :point_right:**Netlify**
-https://learning-club.netlify.app
+https://photograpy-site.netlify.app
 
 ---
 
