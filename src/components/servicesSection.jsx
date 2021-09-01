@@ -4,14 +4,17 @@ import clock from '../img/clock.svg';
 import diaghragm from '../img/diaphragm.svg';
 import money from '../img/money.svg';
 import teamwork from '../img/teamwork.svg';
-import home from '../img/home.jpg';
 import {About,Description,Image} from '../styles/styles';
+import { fade } from '../animation';
+import { UseScroll } from './useScroll';
+
 
 const ServicesSection = ()=>{
+  const [element,controls] =UseScroll();
   return (
-    <Services>
+    <Services variants={fade} animate={controls} initial='hidden' ref={element}>
       <Description>
-        <h2>High <span>quality</span>services</h2>
+        <h2>High <span>Quality</span> Services</h2>
         <Cards>
           <Card>
             <div className="icon">
@@ -48,7 +51,7 @@ const ServicesSection = ()=>{
           </Cards>
         </Description>
        <Image>
-          <img src= {home} alt='home'/>
+          <img src= 'https://images.pexels.com/photos/3022134/pexels-photo-3022134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' alt='home'/>
         </Image>
       </Services>
   );
@@ -70,6 +73,10 @@ p{
 const Cards = styled.div`
 display:flex;
 flex-wrap: wrap;
+
+@media(max-width: 1300px){
+   justify-content: center;
+  }
 
 `;
 
